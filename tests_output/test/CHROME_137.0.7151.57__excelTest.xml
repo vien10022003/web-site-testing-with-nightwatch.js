@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="25"
+            tests="1">
+
+  <testsuite name="test.excelTest" id="test.excelTest"
+    errors="0" failures="25" hostname="" package="excelTest" skipped="0"
+    tests="1" time="213.9" timestamp="">
+  
+    <testcase name="Thực hiện automation từ mô tả trong Excel" classname="test.excelTest" time="213.9" assertions="81">
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;địa chỉ&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3133ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;điện thoại&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3115ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;đào tạo&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5178ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:152:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;mô hình đào tạo&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5179ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;đào tạo&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5157ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:152:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;chương trình đào tạo&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5191ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;đại học công nghệ thông tin&#34;)]&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5169ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;đào tạo&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5137ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:152:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;khảo thí &amp; đbcl&#34;)]&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5158ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;khoa cntt&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3118ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;khoa điện tử viễn thông&#34;)]&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5188ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;khoa đtvt&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3114ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5158ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:152:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;thông báo&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5159ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5163ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:152:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;học bổng&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5135ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;học bổng hiện hành&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3126ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5154ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:152:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;văn bản - biểu mẫu&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5139ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;file pdf&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3111ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;file doc&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3118ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;phân hiệu hcm&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3133ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(text(),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;đào tạo trực tuyến&#34;)]&gt; to be present for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (5184ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:161:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:122:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;không có kết quả phù hợp&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3121ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(.),&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;,&#39;abcdefghijklmnopqrstuvwxyz&#39;),&#34;biểu tượng ☰&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (3136ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:263:21)
+    at runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:133:11)
+    at Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest.js:300:15)</failure>
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

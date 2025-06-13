@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="65"
+            tests="1">
+
+  <testsuite name="test.excelTest2" id="test.excelTest2"
+    errors="0" failures="65" hostname="" package="excelTest2" skipped="0"
+    tests="1" time="285.4" timestamp="">
+  
+    <testcase name="Thực hiện automation từ mô tả trong Excel" classname="test.excelTest2" time="285.3" assertions="246">
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;tiêu đề&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2067ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;tiêu đề&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2058ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;TIÊU ĐỀ&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2076ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Tiêu đề&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2080ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Tiêu Đề&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2064ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;học viện&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2071ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;học viện&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2071ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;hôm nay&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2056ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;hôm nay&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2081ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;HÔM NAY&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2069ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;mô hình&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2076ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;mô hình&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2065ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;MÔ HÌNH&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2083ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Đại học công nghệ thông tin&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2079ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;đại học công nghệ thông tin&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2075ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;ĐẠI HỌC CÔNG NGHỆ THÔNG TIN&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2095ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Đại học công nghệ thông tin&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2074ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Đại Học Công Nghệ Thông Tin&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2094ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khảo thí &amp; ĐBCL&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2085ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;khảo thí &amp; đbcl&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2086ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;KHẢO THÍ &amp; ĐBCL&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2074ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khảo thí &amp; đbcl&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2106ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khảo Thí &amp; Đbcl&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2092ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;khoa ATTT&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2075ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;khoa attt&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2074ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;khoa CNTT&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2093ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;khoa cntt&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2073ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;KHOA CNTT&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2059ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khoa cntt&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2072ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khoa Cntt&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2062ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khoa điện tử viễn thông&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2064ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;khoa điện tử viễn thông&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2088ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;KHOA ĐIỆN TỬ VIỄN THÔNG&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2074ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khoa điện tử viễn thông&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2073ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Khoa Điện Tử Viễn Thông&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2093ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:215:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5168ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5165ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;SINH VIÊN&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2068ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5169ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh Viên&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2096ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5174ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5163ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;SINH VIÊN&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2050ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5166ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh Viên&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2078ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5169ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5158ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;SINH VIÊN&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2070ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh viên&#34;)]&gt; to be visible for 5000 milliseconds. - expected &#34;visible&#34; but got: &#34;not visible&#34; (5150ms)">    at C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:207:23
+    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:185:13)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Sinh Viên&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2086ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:205:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:122:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;phân hiệu HCM&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2073ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;phân hiệu hcm&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2091ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;PHÂN HIỆU HCM&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2066ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Phân hiệu hcm&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2075ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Phân Hiệu Hcm&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2070ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;không có kết quả phù hợp&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2066ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;không có kết quả phù hợp&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2085ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;KHÔNG CÓ KẾT QUẢ PHÙ HỢP&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2076ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Không có kết quả phù hợp&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2073ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Không Có Kết Quả Phù Hợp&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2071ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;biểu tượng ☰&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2080ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;biểu tượng ☰&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2065ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;BIỂU TƯỢNG ☰&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2081ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Biểu tượng ☰&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2081ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[self::a or self::button or self::span or self::h1 or self::i or self::p or self::h2 or self::label][contains(string(.), &#34;Biểu Tượng ☰&#34;)]&gt; to be present for 2000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (2069ms)">    at findFlexibleTextAndDo (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:155:21)
+    at async switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:327:18)
+    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:128:5)
+    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\test\excelTest2.js:384:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
