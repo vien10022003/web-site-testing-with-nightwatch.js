@@ -2,11 +2,10 @@
 
 ## Cài đặt
 
-Để bắt đầu, cài đặt Nightwatch.js và các dependency cần thiết:
-
+Để bắt đầu, cài đặt Nightwatch.js và các dependency cần thiết trong terminal của project:
 
 ```bash
-npm install nightwatch
+npm install
 ```
 
 ## Chạy kiểm thử

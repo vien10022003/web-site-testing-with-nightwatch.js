@@ -1,6 +1,7 @@
 const xlsx = require("xlsx");
 
-const filePath = "test/ACTVN_TestCases.xlsx";
+// const filePath = "test/ACTVN_TestCases (1).xlsx";
+const filePath = "test/ACTVN_TestCases - test.xlsx";
 const outputFile = "test/test-data-result.xlsx";
 
 const workbook = xlsx.readFile(filePath);
@@ -92,6 +93,22 @@ function parseActionsInOrder(description) {
       regex: /Kiểm tra thấy "(.*?)"/g,
       extract: (m) => ({ action: "check_visible", text: m[1] }),
     },
+    {
+      type: "check_url_contains",
+      regex: /Kiểm tra URL chứa "(.*?)"/g,
+      extract: (m) => ({
+        action: "check_url_contains",
+        text: m[1],
+      }),
+    },
+    {
+      type: "check_load_time",
+      regex: /Kiểm tra thời gian tải trang < “?(\d+)”? ms/g,
+      extract: (m) => ({
+        action: "check_load_time",
+        maxTime: parseInt(m[1], 10),
+      }),
+    },
   ];
 
   const results = [];
@@ -135,7 +152,10 @@ async function generateVariants(text) {
     text.toLowerCase(),
     text.toUpperCase(),
     text.charAt(0).toUpperCase() + text.slice(1).toLowerCase(),
-    text.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' '),
+    text
+      .split(" ")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+      .join(" "),
   ];
 }
 
@@ -152,13 +172,27 @@ async function findFlexibleTextAndDo(browser, baseText, callbackFn) {
 
     try {
       await browser.useXpath();
-      await browser.waitForElementPresent('xpath', xpath, 2000);
+      
 
+      const fs = require('fs');
+      await browser.source(function(result) {
+        const logContent = result.value;
+
+        fs.writeFileSync('test/log.html', logContent, { flag: 'w' }); // flag: 'a' là append
+      });
+      
+      await browser.waitForElementPresent("xpath", xpath, 2000);
 
       // 🔍 Log vị trí phần tử
       await browser.execute(
         function (xpath) {
-          const result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+          const result = document.evaluate(
+            xpath,
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+          );
           const element = result.singleNodeValue;
           if (!element) return null;
           const rect = element.getBoundingClientRect();
@@ -167,32 +201,47 @@ async function findFlexibleTextAndDo(browser, baseText, callbackFn) {
             y: rect.y,
             width: rect.width,
             height: rect.height,
-            text: element.innerText || element.textContent
+            text: element.innerText || element.textContent,
           };
         },
         [xpath],
         function (result) {
           if (result.value) {
-            console.log(`📍 Vị trí phần tử: x=${result.value.x.toFixed(0)}, y=${result.value.y.toFixed(0)}, width=${result.value.width.toFixed(0)}, height=${result.value.height.toFixed(0)}, nội dung: "${result.value.text.trim()}"`);
+            console.log(
+              `📍 Vị trí phần tử: x=${result.value.x.toFixed(
+                0
+              )}, y=${result.value.y.toFixed(
+                0
+              )}, width=${result.value.width.toFixed(
+                0
+              )}, height=${result.value.height.toFixed(
+                0
+              )}, nội dung: "${result.value.text.trim()}"`
+            );
           } else {
             console.warn("⚠️ Không thể lấy thông tin vị trí phần tử.");
           }
         }
       );
-      
+
       await browser.useXpath();
 
       await callbackFn(browser, xpath, variant);
       console.log(`✅ Thành công với biến thể: "${variant}"`);
       return true;
     } catch (err) {
-      console.warn(`⚠️ Không tìm thấy phần tử với biến thể: "${variant}"`, err.message || err);
+      console.warn(
+        `⚠️ Không tìm thấy phần tử với biến thể: "${variant}"`,
+        err.message || err
+      );
       console.warn(`🔄 await browser.waitForElementVisible("body", 3000);`);
-      await browser.waitForElementPresent('xpath', "//body", 10000);
+      await browser.waitForElementPresent("xpath", "//body", 10000);
     }
   }
 
-  console.warn(`❌ Không tìm thấy phần tử khớp với bất kỳ biến thể nào của: "${baseText}"`);
+  console.warn(
+    `❌ Không tìm thấy phần tử khớp với bất kỳ biến thể nào của: "${baseText}"`
+  );
   return false;
 }
 
@@ -202,39 +251,67 @@ async function switchAndRunAction(action, type, browser) {
 
   switch (type) {
     case "hover": {
-      const ok = await findFlexibleTextAndDo(browser, action.targetText, async (browser, xpath1) => {
-        console.log(`  - Hover đến phần tử có text: "${action.targetText}"`);
-        await browser.waitForElementVisible('xpath', xpath1, 5000);
-        await browser.moveToElement(xpath1, 5, 5);
-      });
-      if (!ok) throw new Error(`Không tìm thấy phần tử để hover: "${action.targetText}"`);
+      const ok = await findFlexibleTextAndDo(
+        browser,
+        action.targetText,
+        async (browser, xpath1) => {
+          console.log(`  - Hover đến phần tử có text: "${action.targetText}"`);
+          await browser.waitForElementVisible("xpath", xpath1, 5000);
+          await browser.moveToElement(xpath1, 5, 5);
+        }
+      );
+      if (!ok)
+        throw new Error(
+          `Không tìm thấy phần tử để hover: "${action.targetText}"`
+        );
       break;
     }
 
     case "click": {
-      const ok = await findFlexibleTextAndDo(browser, action.targetText, async (browser, xpath) => {
-        console.log(`  - Click vào phần tử có text: "${action.targetText}"`);
-        await browser.waitForElementVisible('xpath', xpath, 5000);
-        await browser.click(xpath);
-        await browser.pause(1000);
-      });
-      if (!ok) throw new Error(`Không tìm thấy phần tử để click: "${action.targetText}"`);
+      const ok = await findFlexibleTextAndDo(
+        browser,
+        action.targetText,
+        async (browser, xpath) => {
+          console.log(`  - Click vào phần tử có text: "${action.targetText}"`);
+          await browser.waitForElementVisible("xpath", xpath, 5000);
+          await browser.click(xpath);
+          await browser.pause(1000);
+        }
+      );
+      if (!ok)
+        throw new Error(
+          `Không tìm thấy phần tử để click: "${action.targetText}"`
+        );
       break;
     }
 
     case "dropdown_click": {
-      const okParent = await findFlexibleTextAndDo(browser, action.parentText, async (browser, parentXpath) => {
-        const okChild = await findFlexibleTextAndDo(browser, action.childText, async (browser, childXpath) => {
-          console.log(`  - Hover vào "${action.parentText}" rồi click vào "${action.childText}"`);
-          await browser.waitForElementVisible(parentXpath, 5000);
-          await browser.moveToElement(parentXpath, 5, 5);
-          await browser.pause(1000);
-          await browser.waitForElementVisible(childXpath, 5000);
-          await browser.click(childXpath);
-        });
-        if (!okChild) throw new Error(`Không tìm thấy phần tử con: "${action.childText}"`);
-      });
-      if (!okParent) throw new Error(`Không tìm thấy phần tử cha: "${action.parentText}"`);
+      const okParent = await findFlexibleTextAndDo(
+        browser,
+        action.parentText,
+        async (browser, parentXpath) => {
+          const okChild = await findFlexibleTextAndDo(
+            browser,
+            action.childText,
+            async (browser, childXpath) => {
+              console.log(
+                `  - Hover vào "${action.parentText}" rồi click vào "${action.childText}"`
+              );
+              await browser.waitForElementVisible(parentXpath, 5000);
+              await browser.moveToElement(parentXpath, 5, 5);
+              await browser.pause(1000);
+              await browser.waitForElementVisible(childXpath, 5000);
+              await browser.click(childXpath);
+            }
+          );
+          if (!okChild)
+            throw new Error(
+              `Không tìm thấy phần tử con: "${action.childText}"`
+            );
+        }
+      );
+      if (!okParent)
+        throw new Error(`Không tìm thấy phần tử cha: "${action.parentText}"`);
       break;
     }
 
@@ -247,13 +324,20 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "click_input_by_label": {
-      const ok = await findFlexibleTextAndDo(browser, action.label, async (browser, labelXpath) => {
-        const inputXpath = `${labelXpath}/following::input[1]`;
-        console.log(`  - Click vào ô input gần label: "${action.label}"`);
-        await browser.waitForElementVisible(inputXpath, 5000);
-        await browser.click(inputXpath);
-      });
-      if (!ok) throw new Error(`Không tìm thấy label để click input: "${action.label}"`);
+      const ok = await findFlexibleTextAndDo(
+        browser,
+        action.label,
+        async (browser, labelXpath) => {
+          const inputXpath = `${labelXpath}/following::input[1]`;
+          console.log(`  - Click vào ô input gần label: "${action.label}"`);
+          await browser.waitForElementVisible(inputXpath, 5000);
+          await browser.click(inputXpath);
+        }
+      );
+      if (!ok)
+        throw new Error(
+          `Không tìm thấy label để click input: "${action.label}"`
+        );
       break;
     }
 
@@ -276,34 +360,57 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "drag_drop": {
-      const okSource = await findFlexibleTextAndDo(browser, action.sourceText, async (browser, sourceXpath) => {
-        const okTarget = await findFlexibleTextAndDo(browser, action.targetText, async (browser, targetXpath) => {
-          console.log(`  - Kéo phần tử "${action.sourceText}" và thả vào "${action.targetText}"`);
-          await browser.waitForElementVisible(sourceXpath, 5000);
-          await browser.waitForElementVisible(targetXpath, 5000);
-          await browser.perform((done) => {
-            browser
-              .moveToElement(sourceXpath, 5, 5)
-              .mouseButtonDown(0)
-              .moveToElement(targetXpath, 5, 5)
-              .mouseButtonUp(0);
-            done();
-          });
-        });
-        if (!okTarget) throw new Error(`Không tìm thấy phần tử đích: "${action.targetText}"`);
-      });
-      if (!okSource) throw new Error(`Không tìm thấy phần tử nguồn: "${action.sourceText}"`);
+      const okSource = await findFlexibleTextAndDo(
+        browser,
+        action.sourceText,
+        async (browser, sourceXpath) => {
+          const okTarget = await findFlexibleTextAndDo(
+            browser,
+            action.targetText,
+            async (browser, targetXpath) => {
+              console.log(
+                `  - Kéo phần tử "${action.sourceText}" và thả vào "${action.targetText}"`
+              );
+              await browser.waitForElementVisible(sourceXpath, 5000);
+              await browser.waitForElementVisible(targetXpath, 5000);
+              await browser.perform((done) => {
+                browser
+                  .moveToElement(sourceXpath, 5, 5)
+                  .mouseButtonDown(0)
+                  .moveToElement(targetXpath, 5, 5)
+                  .mouseButtonUp(0);
+                done();
+              });
+            }
+          );
+          if (!okTarget)
+            throw new Error(
+              `Không tìm thấy phần tử đích: "${action.targetText}"`
+            );
+        }
+      );
+      if (!okSource)
+        throw new Error(`Không tìm thấy phần tử nguồn: "${action.sourceText}"`);
       break;
     }
 
     case "select_dropdown": {
-      const ok = await findFlexibleTextAndDo(browser, action.dropdownText, async (browser, dropdownXpath) => {
-        const selectXpath = `${dropdownXpath}/following::select[1]`;
-        console.log(`  - Chọn "${action.value}" từ dropdown gần "${action.dropdownText}"`);
-        await browser.waitForElementVisible(selectXpath, 5000);
-        await browser.setValue(selectXpath, action.value);
-      });
-      if (!ok) throw new Error(`Không tìm thấy dropdown label: "${action.dropdownText}"`);
+      const ok = await findFlexibleTextAndDo(
+        browser,
+        action.dropdownText,
+        async (browser, dropdownXpath) => {
+          const selectXpath = `${dropdownXpath}/following::select[1]`;
+          console.log(
+            `  - Chọn "${action.value}" từ dropdown gần "${action.dropdownText}"`
+          );
+          await browser.waitForElementVisible(selectXpath, 5000);
+          await browser.setValue(selectXpath, action.value);
+        }
+      );
+      if (!ok)
+        throw new Error(
+          `Không tìm thấy dropdown label: "${action.dropdownText}"`
+        );
       break;
     }
 
@@ -316,7 +423,9 @@ async function switchAndRunAction(action, type, browser) {
     case "check_count": {
       const lowerText = action.text.toLowerCase();
       const xpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${lowerText}")]`;
-      console.log(`  - Kiểm tra số lượng phần tử chứa text "${action.text}" là ${action.expectedCount}`);
+      console.log(
+        `  - Kiểm tra số lượng phần tử chứa text "${action.text}" là ${action.expectedCount}`
+      );
       await browser.elements("xpath", xpath, function (res) {
         this.assert.equal(res.value.length, action.expectedCount);
       });
@@ -324,18 +433,54 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "check_visible": {
-      const ok = await findFlexibleTextAndDo(browser, action.text, async (browser, xpath) => {
+      const ok = await findFlexibleTextAndDo(
+        browser,
+        action.text,
+        async (browser, xpath) => {
+          const fs = require("fs");
+          await browser.source(function (result) {
+            const logContent = result.value;
+            fs.writeFileSync("test/log.html", logContent, { flag: "w" });
+          });
 
-        const fs = require('fs');
-        await browser.source(function(result) {
-          const logContent = result.value;
-          fs.writeFileSync('test/log.html', logContent, { flag: 'w' });
-        });
+          console.log(
+            `  - Kiểm tra phần tử chứa text "${action.text}" hiển thị trên giao diện`
+          );
+          await browser.waitForElementPresent("xpath", xpath, 3000);
+        }
+      );
+      if (!ok)
+        throw new Error(`Không tìm thấy phần tử hiển thị: "${action.text}"`);
+      break;
+    }
 
-        console.log(`  - Kiểm tra phần tử chứa text "${action.text}" hiển thị trên giao diện`);
-        await browser.waitForElementPresent('xpath', xpath, 3000);
+    case "check_url_contains": {
+      console.log(`  - Kiểm tra URL chứa: "${action.text}"`);
+      await browser.url(function (result) {
+        const currentUrl = result.value;
+        console.log(`    URL hiện tại: ${currentUrl}`);
+        if (!currentUrl.includes(action.text)) {
+          throw new Error(`URL hiện tại không chứa "${action.text}"`);
+        }
       });
-      if (!ok) throw new Error(`Không tìm thấy phần tử hiển thị: "${action.text}"`);
+      break;
+    }
+
+    case "check_load_time": {
+      console.log(
+        `  - Đo thời gian tải lại trang, yêu cầu < ${action.maxTime} ms`
+      );
+      const startTime = Date.now();
+      await browser.refresh();
+      await browser.waitForElementPresent("xpath", "//body", 60000);
+      const endTime = Date.now();
+      const loadTime = endTime - startTime;
+      console.log(`    ⏱ Thời gian tải: ${loadTime} ms`);
+      if (loadTime >= action.maxTime) {
+        throw new Error(
+          `Thời gian tải trang quá lâu: ${loadTime} ms (yêu cầu < ${action.maxTime} ms)`
+        );
+      }
       break;
     }
 
@@ -345,11 +490,6 @@ async function switchAndRunAction(action, type, browser) {
 
   console.log(`✅ Hoàn thành action: ${type}\n`);
 }
-
-
-
-
-
 
 module.exports = {
   "@tags": ["excel-ui"],
