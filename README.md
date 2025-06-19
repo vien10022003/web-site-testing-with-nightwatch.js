@@ -28,4 +28,4 @@ Kết quả kiểm thử sẽ được viết vào file `nightwatch/test-data-re
 
 ## Cần trợ giúp?
 
-Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với chúng tôi qua email@example.com
+Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với chúng tôi
