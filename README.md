@@ -8,17 +8,22 @@
 npm install
 ```
 
+
+## Thay thế file excel mà bạn muốn kiểm thử
+
+Mặc định trong code là đang sử dụng file ACTVN_TestCases (1).xlsx để chạy test case, bạn có thể thay thế file này, hoặc vào sửa code để trỏ vào file mà bạn muốn test
+
 ## Chạy kiểm thử
 
 Để thực hiện kiểm thử, sử dụng lệnh sau trong terminal:
 ```bash
-npx nightwatch test/excelTest2.js
+npx nightwatch test/excelTest.js
 ```
 
 ## Mô tả
 
 Đây là một project đơn giản để kiểm thử chức năng của trang web bằng Nightwatch.js. 
-File `excelTest2.js` chứa các test case được mô tả trong file Excel tương ứng.
+File `excelTest.js` chứa các test case được mô tả trong file Excel tương ứng.
 
 ## Cần trợ giúp?
 

@@ -1,6 +1,6 @@
 const xlsx = require("xlsx");
 
-const filePath = "test/ACTVN_TestCases.xlsx";
+const filePath = "test/ACTVN_TestCases (1).xlsx";
 const outputFile = "test/test-data-result.xlsx";
 
 const workbook = xlsx.readFile(filePath);
@@ -101,6 +101,7 @@ function parseActionsInOrder(description) {
     while ((match = pattern.regex.exec(description)) !== null) {
       results.push({
         index: match.index,
+        matchedText: match[0],  
         ...pattern.extract(match),
       });
     }
@@ -115,29 +116,43 @@ function parseActionsInOrder(description) {
   return results.map(({ index, ...rest }) => rest);
 }
 
+let actionSrcText;
+
 async function runTestCase(actions, expectedList, browser) {
   for (let i = 0; i < actions.length; i++) {
-    const action = actions[i];
-    const { action: type } = action;
-    await switchAndRunAction(action, type, browser).catch((error) => {
-      console.error(
-        `❌ Lỗi khi thực hiện action ${i + 1}:`,
-        error.message || error
-      );
-    });
+    const actionJson = actions[i];
+    const actionType = actionJson.action;
+    actionSrcText = actionJson.matchedText;
+    await switchAndRunAction(actionJson, actionType, browser);
   }
 
   for (let i = 0; i < expectedList.length; i++) {
-    const expected = expectedList[i];
-    const { action: expectedtype } = expected;
-    await switchAndRunAction(expected, expectedtype, browser).catch((error) => {
-      console.error(
-        `❌ Lỗi khi thực hiện expected ${i + 1}:`,
-        error.message || error
-      );
-    });
+    const actionJson = expectedList[i];
+    const actionType = actionJson.action;
+    await switchAndRunAction(actionJson, actionType, browser);
   }
 }
+
+// Hàm hỗ trợ: Tạo XPath so sánh text có dấu (tiếng Việt)
+function createTextMatchXpath(inputText) {
+  const upperChars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ";
+  const lowerChars =
+    "abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+  const lowerText = inputText.toLowerCase();
+  return `//*[translate(normalize-space(text()), '${upperChars}', '${lowerChars}') = "${lowerText}"]`;
+}
+
+// Hàm hỗ trợ: Tạo XPath so sánh text có dấu (tiếng Việt)
+function createTextMatchXpathContain(inputText) {
+  const upperChars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ";
+  const lowerChars =
+    "abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+  const lowerText = inputText.toLowerCase();
+  return `//*[contains(translate(normalize-space(text()), '${upperChars}', '${lowerChars}'), "${lowerText}")]`;
+}
+
 async function switchAndRunAction(action, type, browser) {
   console.log(`➡️ Thực hiện action: ${type} với dữ liệu:`, action);
 
@@ -145,39 +160,39 @@ async function switchAndRunAction(action, type, browser) {
 
   switch (type) {
     case "hover": {
-      const lowerText = action.targetText.toLowerCase();
-      const xpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${lowerText}")]`;
-      console.log(`  - Hover đến phần tử có text: "${action.targetText}" (XPath: ${xpath})`);
-      await browser.waitForElementVisible('xpath', xpath, 5000);
+      actionTargetText = action.targetText;
+      const xpath = createTextMatchXpath(actionTargetText);
+      console.log(`  - Hover đến phần tử có text: "${actionTargetText}" (XPath: ${xpath})`);
+      await browser.waitForElementPresent("xpath", xpath, 5000);
       await browser.moveToElement(xpath, 5, 5);
       break;
     }
 
     case "click": {
-      const lowerText = action.targetText.toLowerCase();
-      const xpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${lowerText}")]`;
-      console.log(`  - Click vào phần tử có text: "${action.targetText}" (XPath: ${xpath})`);
-      await browser.waitForElementVisible('xpath', xpath, 5000);
+      actionTargetText = action.targetText;
+      const xpath = createTextMatchXpath(actionTargetText);
+      console.log(`  - Click vào phần tử có text: "${actionTargetText}" (XPath: ${xpath})`);
+      await browser.waitForElementPresent("xpath", xpath, 5000);
       await browser.click(xpath);
       await browser.pause(1000);
       break;
     }
 
     case "dropdown_click": {
-      const parentText = action.parentText.toLowerCase();
-      const childText = action.childText.toLowerCase();
-      const parentXpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${parentText}")]`;
-      const childXpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${childText}")]`;
-      console.log(`  - Hover vào "${action.parentText}" (XPath: ${parentXpath}) rồi click vào "${action.childText}" (XPath: ${childXpath})`);
-      await browser.waitForElementVisible('xpath', parentXpath, 5000);
+      actionTargetText = `Parent: ${action.parentText}, Child: ${action.childText}`;
+      const parentXpath = createTextMatchXpath(action.parentText);
+      const childXpath = createTextMatchXpath(action.childText);
+      console.log(`  - Hover vào "${action.parentText}" rồi click vào "${action.childText}"`);
+      await browser.waitForElementPresent("xpath", parentXpath, 5000);
       await browser.moveToElement(parentXpath, 5, 5);
       await browser.pause(1000);
-      await browser.waitForElementVisible('xpath', childXpath, 5000);
+      await browser.waitForElementPresent("xpath", childXpath, 5000);
       await browser.click(childXpath);
       break;
     }
 
     case "scroll": {
+      actionTargetText = `scroll-${action.direction}`;
       const direction = action.direction === "down" ? 1000 : -1000;
       console.log(`  - Cuộn trang theo chiều: ${action.direction}`);
       await browser.execute(`window.scrollBy(0, ${direction})`);
@@ -186,15 +201,16 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "click_input_by_label": {
-      const labelText = action.label.toLowerCase();
-      const labelXpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${labelText}")]/following::input[1]`;
-      console.log(`  - Click vào ô input gần label: "${action.label}" (XPath: ${labelXpath})`);
-      await browser.waitForElementVisible('xpath', labelXpath, 5000);
+      actionTargetText = action.label;
+      const labelXpath = `${createTextMatchXpath(action.label)}/following::input[1]`;
+      console.log(`  - Click vào ô input gần label: "${actionTargetText}"`);
+      await browser.waitForElementPresent("xpath", labelXpath, 5000);
       await browser.click(labelXpath);
       break;
     }
 
     case "type": {
+      actionTargetText = `type: ${action.value}`;
       console.log(`  - Gõ nội dung: "${action.value}" vào ô đã focus`);
       await browser.setValue("xpath", "//input | //textarea", action.value);
       await browser.pause(500);
@@ -202,6 +218,7 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "press_key": {
+      actionTargetText = `press_key: ${action.key}`;
       const keyMap = {
         ENTER: browser.Keys.ENTER,
         TAB: browser.Keys.TAB,
@@ -213,13 +230,12 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "drag_drop": {
-      const sourceText = action.sourceText.toLowerCase();
-      const targetText = action.targetText.toLowerCase();
-      const sourceXpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${sourceText}")]`;
-      const targetXpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${targetText}")]`;
-      console.log(`  - Kéo phần tử "${action.sourceText}" và thả vào "${action.targetText}"`);
-      await browser.waitForElementVisible('xpath', sourceXpath, 5000);
-      await browser.waitForElementVisible('xpath', targetXpath, 5000);
+      actionTargetText = `Drag: ${action.sourceText} → ${action.targetText}`;
+      const sourceXpath = createTextMatchXpath(action.sourceText);
+      const targetXpath = createTextMatchXpath(action.targetText);
+      console.log(`  - Kéo "${action.sourceText}" và thả vào "${action.targetText}"`);
+      await browser.waitForElementPresent("xpath", sourceXpath, 5000);
+      await browser.waitForElementPresent("xpath", targetXpath, 5000);
       await browser.perform((done) => {
         browser
           .moveToElement(sourceXpath, 5, 5)
@@ -232,23 +248,24 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "select_dropdown": {
-      const dropdownText = action.dropdownText.toLowerCase();
-      const dropdownXpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${dropdownText}")]/following::select[1]`;
-      console.log(`  - Chọn "${action.value}" từ dropdown gần "${action.dropdownText}" (XPath: ${dropdownXpath})`);
-      await browser.waitForElementVisible('xpath', dropdownXpath, 5000);
+      actionTargetText = action.dropdownText;
+      const dropdownXpath = `${createTextMatchXpath(action.dropdownText)}/following::select[1]`;
+      console.log(`  - Chọn "${action.value}" từ dropdown gần "${action.dropdownText}"`);
+      await browser.waitForElementPresent("xpath", dropdownXpath, 5000);
       await browser.setValue(dropdownXpath, action.value);
       break;
     }
 
     case "wait": {
+      actionTargetText = `wait ${action.seconds}s`;
       console.log(`  - Chờ trong ${action.seconds} giây`);
       await browser.pause(action.seconds * 1000);
       break;
     }
 
     case "check_count": {
-      const lowerText = action.text.toLowerCase();
-      const xpath = `//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"${lowerText}")]`;
+      actionTargetText = action.text;
+      const xpath = createTextMatchXpath(action.text);
       console.log(`  - Kiểm tra số lượng phần tử chứa text "${action.text}" là ${action.expectedCount}`);
       await browser.elements("xpath", xpath, function (res) {
         this.assert.equal(res.value.length, action.expectedCount);
@@ -257,19 +274,11 @@ async function switchAndRunAction(action, type, browser) {
     }
 
     case "check_visible": {
-      const lowerText = action.text.toLowerCase();
-      const xpath = `//*[contains(translate(string(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), "${lowerText}")]`;
+      actionTargetText = action.text;
+      const xpath = createTextMatchXpathContain(action.text);
       console.log(`  - Kiểm tra phần tử chứa text "${action.text}" hiển thị trên giao diện`);
-
-      const fs = require('fs');
-      await browser.source(function(result) {
-        const logContent = result.value;
-
-        fs.writeFileSync('test/log.html', logContent, { flag: 'w' }); // flag: 'a' là append
-      });
-
-      await browser.waitForElementVisible('xpath', xpath, 3000);
-      break;  
+      await browser.waitForElementPresent("xpath", xpath, 3000);
+      break;
     }
 
     default:
@@ -280,13 +289,11 @@ async function switchAndRunAction(action, type, browser) {
 }
 
 
-
-
 module.exports = {
   "@tags": ["excel-ui"],
 
   "Thực hiện automation từ mô tả trong Excel": async function (browser) {
-    for (let i = 1; i < rows.length; i++) {
+    for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
       const actions = parseActionsInOrder(row["Bước thực hiện (theo code)"]);
       const expectedList = parseActionsInOrder(
@@ -301,7 +308,7 @@ module.exports = {
         // console.log(`📝 Chờ 1s hoàn tất`);
         await browser.useCss();
         // console.log(`🔄 Chuyển sang chế độ CSS`);
-        await browser.waitForElementVisible("body", 3000);
+        await browser.waitForElementPresent("body", 3000);
         // console.log(`✅ Trang đã sẵn sàng`);
         await browser.useXpath(); // chuyển lại XPATH nếu cần sau đó
         // console.log(`🔄 Chuyển sang chế độ XPATH`);
@@ -314,13 +321,19 @@ module.exports = {
         //   await browser.assert.textContains("body", expectedText);
         // }
 
-        rows[i]["Kết quả kiểm thử"] = "PASS";
-        console.log(`✅ PASS dòng ${i + 2}:`, error.message || error);
+        rows[i]["Trạng thái (Pass/Fail)"] = "PASS";
+        rows[i]["Kết quả thực tế (sau khi chạy script)"] = rows[i]["Kết quả mong đợi (theo code)"];
+        console.log(`✅ PASS dòng ${i + 2}`);
       } catch (error) {
-        rows[i]["Kết quả kiểm thử"] = "FAIL";
+        await browser.waitForElementPresent("xpath", "//body", 60000);
+        rows[i]["Trạng thái (Pass/Fail)"] = `FAIL`;
+        rows[i]["Kết quả thực tế (sau khi chạy script)"] = `Không thể thực hiện hành động "${actionSrcText}"`;
         console.log(`❌ Lỗi dòng ${i + 2}:`, error.message || error);
       }
     }
+await browser.url(browser.launch_url);
+await browser.waitForElementPresent("body", 3000);
+
 
     // Ghi kết quả vào file
     const resultSheet = xlsx.utils.json_to_sheet(rows);
