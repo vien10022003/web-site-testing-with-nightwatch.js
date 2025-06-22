@@ -2,8 +2,8 @@ const xlsx = require("xlsx");
 const { parseActionsInOrder } = require('./utils/textUtils');
 const { runTestCase } = require('./testRunner/testCaseRunner');
 
-const filePath = "nightwatch/ACTVN_TestCases (1).xlsx";
-// const filePath = "nightwatch/ACTVN_TestCases.xlsx";
+// const filePath = "nightwatch/ACTVN_TestCases (1).xlsx";
+const filePath = "nightwatch/ACTVN_TestCases.xlsx";
 const outputFile = "nightwatch/test-data-result.xlsx";
 
 const workbook = xlsx.readFile(filePath);
@@ -12,7 +12,8 @@ const rows = xlsx.utils.sheet_to_json(worksheet, { defval: "" });
 
 console.log("thiết lập xong:", filePath);
 
-let actionSrcText;
+// var actionSrcText;
+global.actionSrcText = "";
 
 module.exports = {
   "@tags": ["excel-ui"],
@@ -39,9 +40,9 @@ module.exports = {
         rows[i]["Kết quả thực tế (sau khi chạy script)"] = rows[i]["Kết quả mong đợi (theo code)"];
         console.log(`✅ PASS dòng ${i + 2}`);
       } catch (error) {
-        await browser.waitForElementPresent("xpath", "//body", 60000);
+        await browser.waitForElementPresent("xpath", "//body", 10000);
         rows[i]["Trạng thái (Pass/Fail)"] = `FAIL`;
-        rows[i]["Kết quả thực tế (sau khi chạy script)"] = `Không thể thực hiện hành động "${actionSrcText}"`;
+        rows[i]["Kết quả thực tế (sau khi chạy script)"] = `Không thể thực hiện hành động "${global.actionSrcText}"`;
         console.log(`❌ Lỗi dòng ${i + 2}:`, error.message || error);
       }
     }
