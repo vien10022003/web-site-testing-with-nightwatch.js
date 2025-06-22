@@ -18,8 +18,15 @@ async function switchAndRunAction(action, type, browser) {
         const lowerChars =
           "abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
         const lowerText = labelText.toLowerCase();
-        const a = `//label[contains(translate(normalize-space(text()), '${upperChars}', '${lowerChars}'), "${lowerText}")]`;
+        const a = `//label[contains(translate(normalize-space(string(.)), '${upperChars}', '${lowerChars}'), "${lowerText}")]/input[@type="radio"]`;
         console.log(`  - Click radio gần text "${labelText}"`);
+
+        const fs = require("fs");
+        await browser.source(function (result) {
+          const logContent = result.value;
+
+          fs.writeFileSync("test/log.html", logContent, { flag: "w" }); // flag: 'a' là append
+        });
 
         await browser.useXpath().waitForElementPresent(a, 5000);
         await browser.click(a);
@@ -30,7 +37,7 @@ async function switchAndRunAction(action, type, browser) {
 
       case "upload_file": {
         const absolutePath = require("path").resolve(
-          __dirname + `/../resource/${action.filename}`
+          __dirname + `/../resources/${action.filename}`
         );
         actionTargetText = `upload: ${action.filename} to #${action.elementId}`;
         const selector = `#${action.elementId}`;

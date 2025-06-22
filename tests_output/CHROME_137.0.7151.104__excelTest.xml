@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
+            failures="0"
             tests="1">
 
   <testsuite name="excelTest" id="excelTest"
-    errors="0" failures="1" hostname="" package="excelTest" skipped="0"
-    tests="1" time="20.88" timestamp="">
+    errors="0" failures="0" hostname="" package="excelTest" skipped="0"
+    tests="1" time="17.34" timestamp="">
   
-    <testcase name="Thực hiện automation từ mô tả trong Excel" classname="excelTest" time="20.87" assertions="16">
+    <testcase name="Thực hiện automation từ mô tả trong Excel" classname="excelTest" time="17.33" assertions="18">
 
     
 
@@ -35,9 +35,11 @@
 
     
 
-      <failure message="Timed out while waiting for element &lt;//label[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;nam&#34;)]&gt; to be present for 5000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (5149ms)">    at switchAndRunAction (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\nightwatch\actions\actionExecutor.js:24:34)
-    at async runTestCase (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\nightwatch\testRunner\testCaseRunner.js:19:7)
-    at async Thực hiện automation từ mô tả trong Excel (C:\Users\vien1\Downloads\OceanTech\School\kiemThuNhung\nightwatch-git\nightwatch\excelTest.js:37:9)</failure>
+    
+
+    
+
+    
 
     
 
