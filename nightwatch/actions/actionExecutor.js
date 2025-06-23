@@ -18,7 +18,8 @@ async function switchAndRunAction(action, type, browser) {
         const lowerChars =
           "abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
         const lowerText = labelText.toLowerCase();
-        const a = `//label[contains(translate(normalize-space(string(.)), '${upperChars}', '${lowerChars}'), "${lowerText}")]/input[@type="radio"]`;
+        const a = `//label[contains(translate(normalize-space(string(.)), '${upperChars}', '${lowerChars}'), "${lowerText}")]/input[@type="radio"]
+         | //span[contains(translate(normalize-space(string(.)), '${upperChars}', '${lowerChars}'), "${lowerText}")]/preceding::input[@type="radio"][1]`;
         console.log(`  - Click radio gần text "${labelText}"`);
 
         // const fs = require("fs");
@@ -213,8 +214,19 @@ async function switchAndRunAction(action, type, browser) {
           TAB: browser.Keys.TAB,
           ESC: browser.Keys.ESCAPE,
         };
-        console.log(`  - Nhấn phím: ${action.key}`);
-        await browser.keys(keyMap[action.key] || action.key);
+        const keyToPress = keyMap[action.key] || action.key;
+
+        console.log(`  - Nhấn phím: ${action.key} vào phần tử đang được focus`);
+
+        await browser.perform(async function () {
+          await browser
+            .actions({ async: true })
+            .keyDown(keyToPress)
+            .keyUp(keyToPress)
+            .perform();
+        });
+
+        await browser.pause(500);
         break;
       }
 

@@ -1,1 +1,3 @@
 node_modules/
+nightwatch/test-data-result.xlsx
+tests_output/
