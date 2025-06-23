@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="test.check" id="test.check"
+    errors="0" failures="0" hostname="" package="check" skipped="0"
+    tests="1" time="1.506" timestamp="">
+  
+    <testcase name="Thực hiện automation từ mô tả trong Excel" classname="test.check" time="1.499" assertions="11">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

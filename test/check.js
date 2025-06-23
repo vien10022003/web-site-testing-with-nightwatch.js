@@ -1,7 +1,7 @@
 const xlsx = require("xlsx");
 
-const filePath = "test/ACTVN_TestCases.xlsx";
-const outputFile = "test/test-data-result.xlsx";
+const filePath = "test/check.xlsx";
+const outputFile = "test/result check.xlsx";
 
 const workbook = xlsx.readFile(filePath);
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
@@ -272,14 +272,18 @@ async function switchAndRunAction(action, type, browser) {
 
     case "check_visible": {
       // Tất cả ký tự có dấu (bao gồm cả chữ hoa và thường)
-      const accentedChars =     "ĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ" + "đáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
-      const unaccentedChars =   "DAAAAAAAAAAAAAAAAAEEEEEEEEEEEIIIIIOOOOOOOOOOOOOOOOOUUUUUUUUUUUYYYYY" + "daaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy";
+      const accentedChars =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ" +
+        "đáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+      const unaccentedChars =
+        "abcdefghijklmnopqrstuvwxyzdaaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy" +
+        "daaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy";
 
-      const noAccentText = action.text
-        .normalize("NFC") // xử lý các tổ hợp dấu nếu có
-        .toLowerCase();
-
-      console.log(`  - Kiểm tra phần tử chứa text "${action.text}" (có dấu) hiển thị trên giao diện`);
+      const noAccentText1 = action.text.toLowerCase();
+      const noAccentText = removeVietnameseAccents(noAccentText1);
+      console.log(
+        `  - Kiểm tra phần tử chứa text "${action.text}" (có dấu) hiển thị trên giao diện`
+      );
       console.log(`    - Chuyển đổi sang không dấu: "${noAccentText}"`);
       const xpath = `//*[contains(
     translate(
@@ -300,7 +304,7 @@ async function switchAndRunAction(action, type, browser) {
       //   fs.writeFileSync("test/log.html", logContent, { flag: "w" });
       // });
 
-      await browser.useXpath().WaitForElementPresent(xpath, 3000);
+      await browser.useXpath().waitForElementPresent(xpath, 3000);
       break;
     }
 
@@ -311,11 +315,28 @@ async function switchAndRunAction(action, type, browser) {
   console.log(`✅ Hoàn thành action: ${type}\n`);
 }
 
+function removeVietnameseAccents(str) {
+  const from =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ" +
+    "đáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+  const to =
+    "abcdefghijklmnopqrstuvwxyzdaaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy" +
+    "daaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy";
+  return str
+    .split("")
+    .map((c) => {
+      const index = from.indexOf(c);
+      return index !== -1 ? to[index] : c;
+    })
+    .join("")
+    .toLowerCase();
+}
+
 module.exports = {
   "@tags": ["excel-ui"],
 
   "Thực hiện automation từ mô tả trong Excel": async function (browser) {
-    for (let i = 1; i < rows.length; i++) {
+    for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
       const actions = parseActionsInOrder(row["Bước thực hiện (theo code)"]);
       const expectedList = parseActionsInOrder(
@@ -324,7 +345,10 @@ module.exports = {
       console.log(`🔍 Dòng ${i + 2}:`, actions);
 
       try {
-        await browser.url(browser.launch_url);
+        let url =
+          "file:///C:/Users/vien1/Downloads/OceanTech/School/kiemThuNhung/nightwatch-git/test/check.html";
+        await browser.url(url);
+
         // console.log(`🌐 Mở trang: ${browser.launch_url}`);
         await browser.pause(1000); // chờ thêm 1 giây trước khi kiểm tra
         // console.log(`📝 Chờ 1s hoàn tất`);
