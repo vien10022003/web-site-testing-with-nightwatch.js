@@ -1,7 +1,80 @@
 const {
   createTextMatchXpath,
   createTextMatchXpathContain,
+  getXpathForTittle,
+  getXpathForContent,
+  getXpathForKeyWord,
+  getXpathForAll,
 } = require("../utils/textUtils");
+
+async function findAnyMatchByWords(browser, inputText, getXpathFn, label = "") {
+  const words = inputText.toLowerCase().split(/\s+/);
+  let found = false;
+
+  for (const word of words) {
+    const xpath = getXpathFn(word);
+    console.log(`🔍 [${label}] Kiểm tra từ: "${word}"...`);
+    try {
+      await browser.useXpath().waitForElementPresent(xpath, 3000);
+      console.log(`✅ Tìm thấy: "${word}"`);
+      found = true;
+      break;
+    } catch (err) {
+      console.log(`❌ Không tìm thấy: "${word}"`);
+    }
+  }
+
+  if (!found) {
+    throw new Error(
+      `❗ Không tìm thấy bất kỳ từ nào trong chuỗi: "${inputText}"`
+    );
+  }
+}
+
+async function findExactPhraseMatch(
+  browser,
+  inputText,
+  getXpathFn,
+  label = ""
+) {
+  const phrase = inputText.trim().toLowerCase(); // Loại bỏ khoảng trắng thừa, lowercase
+  const xpath = getXpathFn(phrase);
+
+  console.log(`🔍 [${label}] Kiểm tra cụm từ chính xác: "${phrase}"...`);
+  try {
+    await browser.useXpath().waitForElementPresent(xpath, 3000);
+    console.log(`✅ Tìm thấy cụm chính xác: "${phrase}"`);
+  } catch (err) {
+    console.log(`❌ Không tìm thấy cụm chính xác: "${phrase}"`);
+    throw new Error(`❗ Không tìm thấy cụm từ chính xác: "${inputText}"`);
+  }
+}
+
+async function findAllWordsMatch(browser, inputText, getXpathFn, label = "") {
+  const words = inputText.toLowerCase().trim().split(/\s+/); // Tách từ
+  const notFoundWords = [];
+
+  for (const word of words) {
+    const xpath = getXpathFn(word);
+    console.log(`🔍 [${label}] Kiểm tra từ bắt buộc: "${word}"...`);
+
+    try {
+      await browser.useXpath().waitForElementPresent(xpath, 1000);
+      console.log(`✅ Tìm thấy từ: "${word}"`);
+    } catch (err) {
+      console.log(`❌ Không tìm thấy từ: "${word}"`);
+      notFoundWords.push(word);
+    }
+  }
+
+  if (notFoundWords.length > 0) {
+    throw new Error(
+      `❗ Không tìm thấy các từ bắt buộc trong cụm: ${notFoundWords
+        .map((w) => `"${w}"`)
+        .join(", ")}`
+    );
+  }
+}
 
 async function switchAndRunAction(action, type, browser) {
   console.log(`➡️ Thực hiện action: ${type} với dữ liệu:`, action);
@@ -10,6 +83,109 @@ async function switchAndRunAction(action, type, browser) {
 
   try {
     switch (type) {
+      case "find_title_any":
+        await findAnyMatchByWords(
+          browser,
+          action.text,
+          getXpathForTittle,
+          "Tiêu đề"
+        );
+        break;
+
+      case "find_content_any":
+        await findAnyMatchByWords(
+          browser,
+          action.text,
+          getXpathForContent,
+          "Nội dung"
+        );
+        break;
+
+      case "find_keyword_any":
+        await findAnyMatchByWords(
+          browser,
+          action.text,
+          getXpathForKeyWord,
+          "Từ khóa"
+        );
+        break;
+
+      case "find_all_any":
+        await findAnyMatchByWords(browser, action.text, getXpathForAll, "Tất cả");
+        break;
+      //-----
+      case "find_title_exact":
+        await findExactPhraseMatch(
+          browser,
+          action.text,
+          getXpathForTittle,
+          "Tiêu đề"
+        );
+        break;
+
+      case "find_content_exact":
+        await findExactPhraseMatch(
+          browser,
+          action.text,
+          getXpathForContent,
+          "Nội dung"
+        );
+        break;
+
+      case "find_keyword_exact":
+        await findExactPhraseMatch(
+          browser,
+          action.text,
+          getXpathForKeyWord,
+          "Từ khóa"
+        );
+        break;
+
+      case "find_all_exact":
+        await findExactPhraseMatch(
+          browser,
+          action.text,
+          getXpathForAll,
+          "Tất cả"
+        );
+        break;
+      //-----
+      case "find_title_all":
+        await findAllWordsMatch(
+          browser,
+          action.text,
+          getXpathForTittle,
+          "Tiêu đề"
+        );
+        break;
+
+      case "find_content_all":
+        await findAllWordsMatch(
+          browser,
+          action.text,
+          getXpathForContent,
+          "Nội dung"
+        );
+        break;
+
+      case "find_keyword_all":
+        await findAllWordsMatch(
+          browser,
+          action.text,
+          getXpathForKeyWord,
+          "Từ khóa"
+        );
+        break;
+
+      case "find_all_all":
+        await findAllWordsMatch(
+          browser,
+          action.text,
+          getXpathForAll,
+          "Tất cả"
+        );
+        break;
+      //-----
       case "click_by_radio": {
         const labelText = action.text;
 
@@ -105,7 +281,7 @@ async function switchAndRunAction(action, type, browser) {
         actionTargetText = action.targetText;
 
         // Các thẻ có thể click
-        const clickableTags = ["button", "a", "span", "label", "li"];
+        const clickableTags = ["button", "a", "span", "label", "li", "option"];
         const tagConditions = clickableTags
           .map((tag) => `self::${tag}`)
           .join(" or ");

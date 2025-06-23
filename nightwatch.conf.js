@@ -40,7 +40,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'https://actvn.edu.vn',
+      launch_url: 'http://thuvienso.actvn.edu.vn',
 
       screenshots: {
         enabled: false,

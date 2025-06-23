@@ -3,6 +3,102 @@ function parseActionsInOrder(description) {
   console.log(description);
   const patterns = [
     {
+      type: "find_title_all",
+      regex: /Tìm thấy "(.*?)" theo Tiêu đề và Tất cả cụm từ/g,
+      extract: (m) => ({
+        action: "find_title_all",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_title_exact",
+      regex: /Tìm thấy "(.*?)" theo Tiêu đề và Chính xác cụm từ/g,
+      extract: (m) => ({
+        action: "find_title_exact",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_title_any",
+      regex: /Tìm thấy "(.*?)" theo Tiêu đề và Ít nhất một từ/g,
+      extract: (m) => ({
+        action: "find_title_any",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_content_all",
+      regex: /Tìm thấy "(.*?)" theo Nội dung và Tất cả cụm từ/g,
+      extract: (m) => ({
+        action: "find_content_all",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_content_exact",
+      regex: /Tìm thấy "(.*?)" theo Nội dung và Chính xác cụm từ/g,
+      extract: (m) => ({
+        action: "find_content_exact",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_content_any",
+      regex: /Tìm thấy "(.*?)" theo Nội dung và Ít nhất một từ/g,
+      extract: (m) => ({
+        action: "find_content_any",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_keyword_all",
+      regex: /Tìm thấy "(.*?)" theo Từ khóa và Tất cả cụm từ/g,
+      extract: (m) => ({
+        action: "find_keyword_all",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_keyword_exact",
+      regex: /Tìm thấy "(.*?)" theo Từ khóa và Chính xác cụm từ/g,
+      extract: (m) => ({
+        action: "find_keyword_exact",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_keyword_any",
+      regex: /Tìm thấy "(.*?)" theo Từ khóa và Ít nhất một từ/g,
+      extract: (m) => ({
+        action: "find_keyword_any",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_all_all",
+      regex: /Tìm thấy "(.*?)" theo Tất cả và Tất cả cụm từ/g,
+      extract: (m) => ({
+        action: "find_all_all",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_all_exact",
+      regex: /Tìm thấy "(.*?)" theo Tất cả và Chính xác cụm từ/g,
+      extract: (m) => ({
+        action: "find_all_exact",
+        text: m[1],
+      }),
+    },
+    {
+      type: "find_all_any",
+      regex: /Tìm thấy "(.*?)" theo Tất cả và Ít nhất một từ/g,
+      extract: (m) => ({
+        action: "find_all_any",
+        text: m[1],
+      }),
+    },
+    {
       type: "click_by_radio",
       regex: /Chọn radio "(.*?)"/g,
       extract: (m) => ({
@@ -176,10 +272,78 @@ function createTextMatchXpathContain(inputText) {
   return `//*[contains(translate(normalize-space(text()), '${upperChars}', '${lowerChars}'), "${lowerText}")]`;
 }
 
+// Hàm hỗ trợ: Tạo XPath so sánh text có dấu (tiếng Việt)
+function createTextMatchXpathContain(inputText) {
+  const upperChars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ";
+  const lowerChars =
+    "abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+  const lowerText = inputText.toLowerCase();
+  return `//*[contains(translate(normalize-space(text()), '${upperChars}', '${lowerChars}'), "${lowerText}")]`;
+}
 
+const accented =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+const unaccented =
+  "abcdefghijklmnopqrstuvwxyzdaaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyydaaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy";
+
+function getXpathForTittle(text) {
+  //(tiêu đề)
+  const xpath = `//p[contains(@class, 'title_book') and contains(
+    translate(string(.), '${accented}', '${unaccented}'),
+      '${removeVietnameseAccents(text)}'
+  )]`;
+  return xpath;
+}
+
+function getXpathForContent(text) {
+  //nội dung
+  const xpath = `(//div[contains(@class, 'decs_book')]//p)[1][contains(
+      translate(normalize-space(string(.)), '${accented}', '${unaccented}'),
+      '${removeVietnameseAccents(text)}'
+    )]`;
+  return xpath;
+}
+function getXpathForKeyWord(text) {
+  // từ khóa
+  const xpath = `(//div[contains(@class, 'decs_book')]//p)[3][contains(
+      translate(normalize-space(string(.)), '${accented}', '${unaccented}'),
+      '${removeVietnameseAccents(text)}'
+    )]`;
+  return xpath;
+}
+function getXpathForAll(text) {
+  //tất cả
+  const xpath = `//*[@id="box_search_book_result"][contains(
+      translate(normalize-space(string(.)), '${accented}', '${unaccented}'),
+      '${removeVietnameseAccents(text)}'
+    )]`;
+  return xpath;
+}
+
+// Tất cả ký tự có dấu (bao gồm cả chữ hoa và thường)
+function removeVietnameseAccents(str) {
+  const from =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ" +
+    "đáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ";
+  const to =
+    "abcdefghijklmnopqrstuvwxyzdaaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy" +
+    "daaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyy";
+  return str
+    .split("")
+    .map((c) => {
+      const index = from.indexOf(c);
+      return index !== -1 ? to[index] : c;
+    })
+    .join("");
+}
 
 module.exports = {
   parseActionsInOrder,
   createTextMatchXpath,
   createTextMatchXpathContain,
+  getXpathForTittle,
+  getXpathForContent,
+  getXpathForKeyWord,
+  getXpathForAll,
 };
