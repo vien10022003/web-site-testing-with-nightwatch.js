@@ -4,6 +4,7 @@ const { runTestCase } = require("./testRunner/testCaseRunner");
 
 const filePath = "nightwatch/ACTVN_TestCases (1).xlsx";
 // const filePath = "nightwatch/ACTVN_TestCases.xlsx";
+// const filePath = "nightwatch/ACTVN_TestCases test.xlsx";
 const outputFile = "nightwatch/test-data-result.xlsx";
 
 const workbook = xlsx.readFile(filePath);
@@ -55,7 +56,7 @@ module.exports = {
     const resultBook = xlsx.utils.book_new();
     xlsx.utils.book_append_sheet(resultBook, resultSheet, "Sheet1");
     xlsx.writeFile(resultBook, outputFile);
-
+    console.warn(`✅✅✅✅✅ Kết quả đã được ghi vào file: ${outputFile}`);
     browser.end();
   },
 };

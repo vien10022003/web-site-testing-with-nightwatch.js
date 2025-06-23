@@ -21,16 +21,15 @@ async function switchAndRunAction(action, type, browser) {
         const a = `//label[contains(translate(normalize-space(string(.)), '${upperChars}', '${lowerChars}'), "${lowerText}")]/input[@type="radio"]`;
         console.log(`  - Click radio gần text "${labelText}"`);
 
-        const fs = require("fs");
-        await browser.source(function (result) {
-          const logContent = result.value;
+        // const fs = require("fs");
+        // await browser.source(function (result) {
+        //   const logContent = result.value;
 
-          fs.writeFileSync("test/log.html", logContent, { flag: "w" }); // flag: 'a' là append
-        });
+        //   fs.writeFileSync("log.html", logContent, { flag: "w" }); // flag: 'a' là append
+        // });
 
         await browser.useXpath().waitForElementPresent(a, 5000);
         await browser.click(a);
-
 
         break;
       }
@@ -56,19 +55,23 @@ async function switchAndRunAction(action, type, browser) {
         actionTargetText = `alert: ${action.expectedText}`;
         console.log(`  - Kiểm tra nội dung alert và nhấn OK`);
 
-        await browser
-          .pause(500) // chờ alert xuất hiện
-          .getAlertText(function (result) {
-            console.log(`  - Nội dung alert là: "${result.value}"`);
-            this.assert.strictEqual(
-              result.value.toLowerCase(),
-              action.expectedText.toLowerCase()
-            );
-          })
-          .acceptAlert();
+        const result = await browser.pause(500).getAlertText();
 
+        const actual = result.trim();
+        const expected = action.expectedText.trim();
+
+        console.log(`  - Nội dung alert là: "${actual}"`);
+
+        if (actual != expected) {
+          throw new Error(
+            `Nội dung alert không khớp: "${actual}" !== "${expected}"`
+          );
+        }
+
+        await browser.acceptAlert();
         break;
       }
+
       case "navigate": {
         actionTargetText = `visit: ${action.url}`;
         console.log(`  - Truy cập vào trang: ${action.url}`);
