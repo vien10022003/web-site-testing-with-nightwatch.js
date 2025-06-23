@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="5"
+            tests="1">
+
+  <testsuite name="excelTest" id="excelTest"
+    errors="1" failures="5" hostname="" package="excelTest" skipped="0"
+    tests="1" time="157.2" timestamp="">
+  
+    <testcase name="Thực hiện automation từ mô tả trong Excel" classname="excelTest" time="157.2" assertions="105">
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;tiêu đề&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (3195ms)">    at switchAndRunAction (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\actions\actionExecutor.js:263:23)
+    at async runTestCase (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\testRunner\testCaseRunner.js:52:7)
+    at async Thực hiện automation từ mô tả trong Excel (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;khoa cntt&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (3163ms)">    at switchAndRunAction (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\actions\actionExecutor.js:263:23)
+    at async runTestCase (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\testRunner\testCaseRunner.js:52:7)
+    at async Thực hiện automation từ mô tả trong Excel (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;nghiên cứu khoa học dành  cho sv&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (3304ms)">    at switchAndRunAction (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\actions\actionExecutor.js:263:23)
+    at async runTestCase (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\testRunner\testCaseRunner.js:52:7)
+    at async Thực hiện automation từ mô tả trong Excel (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;không có kết quả phù hợp&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (3355ms)">    at switchAndRunAction (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\actions\actionExecutor.js:263:23)
+    at async runTestCase (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\testRunner\testCaseRunner.js:52:7)
+    at async Thực hiện automation từ mô tả trong Excel (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37:9)</failure>
+
+    
+
+      <failure message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;biểu tượng ☰&#34;)]&gt; to be present for 3000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (3281ms)">    at switchAndRunAction (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\actions\actionExecutor.js:263:23)
+    at async runTestCase (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\testRunner\testCaseRunner.js:52:7)
+    at async Thực hiện automation từ mô tả trong Excel (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37:9)</failure>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <error message="Timed out while waiting for element &lt;//*[contains(translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;), &#34;biểu tượng ☰&#34;)]&gt; to be present for 3000 milliseconds. - expected [32m&#34;found&#34;[39m but got: [31m&#34;not found&#34;[39m [90m(3281ms)[39m" type="error"><![CDATA[
+    Error
+    at switchAndRunAction (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\actions\actionExecutor.js:263:23)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at process.processTimers (node:internal/timers:520:9)
+    at async runTestCase (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\testRunner\testCaseRunner.js:52:7)
+    at async Thực hiện automation từ mô tả trong Excel (D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37:9)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       TimeoutError
+   An error occurred while running .click() command on &lt;//*[self::button or self::a or self::span or self::label or self::li] [translate(normalize-space(text()), &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZĐÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴ&#39;, &#39;abcdefghijklmnopqrstuvwxyzđáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵ&#39;) = &#34;thư viện số&#34;]&gt;: element not interactable
+  (Session info: chrome=137.0.7151.120)
+    {&#34;error&#34;:{&#34;name&#34;:&#34;ElementNotInteractableError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+
+    Error location:
+    D:\KMA\NAM_4\Ky_2\KiemThuPhanMemNhung\project\web-site-testing-with-nightwatch.js\nightwatch\excelTest.js:37
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     35 |         await browser.useXpath();
+     36 | 
+     37 |         await runTestCase(actions, expectedList, browser); 
+     38 | 
+     39 |         rows[i][&#34;Trạng thái (Pass/Fail)&#34;] = &#34;PASS&#34;;
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
